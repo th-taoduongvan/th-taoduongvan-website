@@ -39,25 +39,12 @@
 
     <div class="container py-5">
         <h1 class="text-center mb-5">TIN TỨC - SỰ KIỆN</h1>
-
-        <div class="row g-4">
-            {% for post in site.posts %}
-            <div class="col-md-6 col-lg-4">
-                <div class="card news-card h-100">
-                    <div class="card-body">
-                        <h5>{{ post.title }}</h5>
-                        <p class="text-muted">{{ post.date | date: "%d/%m/%Y" }}</p>
-                        <p>{{ post.content | strip_html | truncatewords: 25 }}...</p>
-                        <a href="{{ post.url }}" class="btn btn-primary btn-sm">Đọc thêm →</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+        <p class="text-center text-muted">Các hoạt động và tin tức mới nhất của nhà trường sẽ được cập nhật ở đây.</p>
+        
+        <!-- Bạn sẽ thêm bài viết mới vào phần này sau -->
+        <div class="row g-4" id="news-container">
+            <!-- Bài viết sẽ được thêm thủ công ở đây -->
         </div>
-
-        {% if site.posts.size == 0 %}
-        <p class="text-center text-muted">Chưa có bài viết nào. Bạn hãy thêm bài viết đầu tiên nhé!</p>
-        {% endif %}
     </div>
 
     <footer class="bg-dark text-white text-center py-4">
