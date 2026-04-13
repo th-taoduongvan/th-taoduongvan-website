@@ -9,10 +9,19 @@
         body { font-family: 'Segoe UI', sans-serif; }
         .navbar { background-color: #1e3a8a !important; }
         .hero { 
-            background: linear-gradient(rgba(30,58,138,0.75), rgba(30,58,138,0.75)), 
-                        url('https://picsum.photos/id/1015/1920/600') center/cover no-repeat; 
+            background: linear-gradient(rgba(30,58,138,0.65), rgba(30,58,138,0.65)), 
+                        url('https://picsum.photos/id/1005/1920/800') center/cover no-repeat; 
             color: white; 
-            padding: 160px 0; 
+            padding: 180px 0; 
+            min-height: 100vh;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.4rem; white-space: normal; }
         }
         .card { transition: all 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
@@ -20,7 +29,7 @@
 </head>
 <body>
 
-    <!-- MENU CHÍNH -->
+    <!-- MENU -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">🏠 TẢO DƯƠNG VĂN</a>
@@ -40,13 +49,13 @@
         </div>
     </nav>
 
-    <!-- ẢNH BÌA (HERO) -->
+    <!-- ẢNH BÌA MỚI (đã thay ảnh trường học) -->
     <section class="hero text-center">
         <div class="container">
             <h1 class="display-3 fw-bold">TRƯỜNG TIỂU HỌC TẢO DƯƠNG VĂN</h1>
             <p class="lead fs-3">Xã Vân Đình - TP. Hà Nội</p>
             <p class="fs-4 mb-4">Nơi chia sẻ hoạt động giáo dục và tài nguyên số của nhà trường</p>
-            <a href="hoat-dong-chuyen-mon.html" class="btn btn-warning btn-lg">Xem Các Hoạt Động Chuyên Môn</a>
+            <a href="hoat-dong-chuyen-mon.html" class="btn btn-warning btn-lg px-5 py-3">Xem Các Hoạt Động Chuyên Môn</a>
         </div>
     </section>
 
@@ -65,8 +74,8 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h5>📞 Liên hệ</h5>
-                        <p><strong>SĐT trường:</strong> [0949919215]</p>
-                        <p><strong>Email:</strong> [c1taoduongvan-uh@hanoiedu.vn]</p>
+                        <p><strong>SĐT trường:</strong> 0949919215</p>
+                        <p><strong>Email:</strong> c1taoduongvan-uh@hanoiedu.vn</p>
                     </div>
                 </div>
             </div>
