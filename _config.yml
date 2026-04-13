@@ -1,0 +1,19 @@
+title: Trường Tiểu học Tảo Dương Văn
+description: Website chính thức của Trường Tiểu học Tảo Dương Văn - Xã Vân Đình - TP. Hà Nội
+baseurl: "/th-taoduongvan-website"
+url: "https://th-taoduongvan.github.io"
+
+# Cài đặt cơ bản
+lang: vi
+timezone: Asia/Ho_Chi_Minh
+
+# Theme mặc định (sẽ dùng theme đơn giản)
+theme: minima
+
+# Thông tin trường
+author: Trường Tiểu học Tảo Dương Văn
+email: c1taoduong-uh@hanoiedu.vn
+phone: 
+
+# Cài đặt hiển thị
+show_excerpts: true
