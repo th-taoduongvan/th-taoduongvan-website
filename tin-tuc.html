@@ -39,38 +39,25 @@
 
     <div class="container py-5">
         <h1 class="text-center mb-5">TIN TỨC - SỰ KIỆN</h1>
-        
+
         <div class="row g-4">
+            {% for post in site.posts %}
             <div class="col-md-6 col-lg-4">
                 <div class="card news-card h-100">
                     <div class="card-body">
-                        <h5>🎉 Lễ khai giảng năm học 2025-2026</h5>
-                        <p class="text-muted">12/09/2025</p>
-                        <p>Nhà trường long trọng tổ chức lễ khai giảng với sự tham gia của toàn thể học sinh và phụ huynh.</p>
+                        <h5>{{ post.title }}</h5>
+                        <p class="text-muted">{{ post.date | date: "%d/%m/%Y" }}</p>
+                        <p>{{ post.content | strip_html | truncatewords: 25 }}...</p>
+                        <a href="{{ post.url }}" class="btn btn-primary btn-sm">Đọc thêm →</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card news-card h-100">
-                    <div class="card-body">
-                        <h5>🏆 Thi vẽ tranh chủ đề "Em yêu trường em"</h5>
-                        <p class="text-muted">05/10/2025</p>
-                        <p>Học sinh các khối tham gia nhiệt tình và có nhiều bức tranh đẹp được triển lãm.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card news-card h-100">
-                    <div class="card-body">
-                        <h5>📚 Hội thảo chuyên môn giáo viên tháng 9</h5>
-                        <p class="text-muted">20/09/2025</p>
-                        <p>Giáo viên nhà trường trao đổi kinh nghiệm áp dụng phương pháp dạy học tích cực.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
+
+        {% if site.posts.size == 0 %}
+        <p class="text-center text-muted">Chưa có bài viết nào. Bạn hãy thêm bài viết đầu tiên nhé!</p>
+        {% endif %}
     </div>
 
     <footer class="bg-dark text-white text-center py-4">
